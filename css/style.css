@@ -1,0 +1,63 @@
+ /* 요즘은 CSS에서도 변수를 쓴다고 함. 변수 쓰기 연습 */
+/* CSS에서 변수 선언할 때는 HTML에서 최상위 요소를 선택해야 한다.
+:root를 잡으면 됨. 사실상 HTML을 잡는 것이지만, :HTML을 하는 것보다 우선시 되므로. */
+
+:root{
+    /* color */
+    --color-white:#fff ; /* --는 변수 명을 만든다는 뜻이다. */
+    --color-black:#27272e;
+    --color-blue:rgb(139, 139, 247);
+    --color-orange: rgb(255, 189, 66);
+    --color-grey:#989ba1;
+    --color-green: rgb(177, 235, 148);
+    --color-yellow: rgb(246, 225, 108);
+    --color-pink: rgb(239, 139, 156);
+    /* size */
+    --size-max-width : 1200px;
+    /* site colors */
+    --color-primary:var(--color-black);/* var(--)는 변수를 불러온다는 뜻이다.. */
+    --color-primary-varient:var(--color-grey);
+    --color-accent:var(--color-orange);
+    --color-accent-varient:var(--color-yellow);
+    --color-text:var(--color-white);
+
+}
+/* 전체선택자 */
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+ }
+ strong{color:var(--color-pink)}
+ 
+ /* 리스트 */
+ ul,li,ol{
+    list-style: none;
+ }
+ /* 앵커 */
+a{
+    text-decoration: none;
+    color:var(--color-text);
+}
+/* 버튼 */
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+/* Common */
+.title{
+    font-size:32px;
+    margin: 16px 0;
+}
+
+.description {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+/* home */
+#home{
+    background-color: var(--color-primary);
+    color:var(--color-text);
+
+}

@@ -1,0 +1,311 @@
+/* 단위를 rem, em으로 바꿔주기 */
+
+:root{
+    /* color */
+    --color-white:#fff ; /* --는 변수 명을 만든다는 뜻이다. */
+    --color-black:#27272e;
+    --color-blue:rgb(139, 139, 247);
+    --color-orange: rgb(255, 189, 66);
+    --color-grey:#606977;
+    --color-grey200:#9ea8b9;
+    --color-green: rgb(177, 235, 148);
+    --color-yellow: rgb(246, 225, 108);
+    --color-pink: rgb(239, 139, 156);
+    /* size */
+    --size-max-width : 1200px;
+    /* site colors */
+    --color-primary:var(--color-black);/* var(--)는 변수를 불러온다는 뜻이다.. */
+    --color-primary-varient:var(--color-grey);
+    --color-primary-varient200:var(--color-grey200);
+    --color-accent:var(--color-orange);
+    --color-accent-varient:var(--color-yellow);
+    --color-text:var(--color-white);
+}
+html{
+  scroll-behavior: smooth;
+    /* 원래는 네비게이션 클릭시 부드러운 스크롤도 js로 설정하지만, 이렇게 하면 css에서도 설정 가능하다. */
+}
+/* 전체선택자 */
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+ }
+
+
+/* 리스트 */
+ ul,li,ol{
+    list-style: none;
+ }
+
+/* 앵커 */
+a{
+    text-decoration: none;
+    color:var(--color-text);
+}
+
+/* 버튼 */
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Common */
+.section{
+  padding: 4rem;
+  text-align: center;
+}
+.max_container{
+  margin: auto;
+  max-width: var(--size-max-width);
+}
+.title{
+    font-size:2.5rem;
+    margin: 16px 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* header */
+.header{
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.header_logo{
+    display: flex;  /* 내부요소들을 정렬하기 위해. header_logo는 header의 item인 것과 동시에 img와 h1을 담는 부모요소다. */
+    align-items: center;
+}
+.header_logo_img{width: 36px;height: 36px;margin: 4px;}
+.header_logo_title{font-size:1.625rem;}
+.header_menu{display: flex;}
+.header_menu_item{padding: 8px 16px;}
+.header_menu_item:hover{border-bottom:1px solid ;color: var(--color-accent);}
+/* 네비 메뉴중에서도 active인 것의 설정*/
+.header_menu_item.active{   /* item과 .active 사이 띄어쓰기하면, item 내부에서 .active를 찾으니 안된다!! */
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+}
+
+
+
+/* 모바일에서만 나타나는 햄버거 버튼 */
+.header_toggle{display: none;}
+
+/* home */
+#home{
+    background-color: var(--color-primary);
+    color:var(--color-text);
+    padding: 5rem 1rem;
+    text-align: center;
+}
+.home_avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 3px solid var(--color-accent);
+}
+.home_title{
+    font-size: 3rem;
+    margin-bottom: 1rem;   
+}
+.home_title strong{
+    color:var(--color-accent-varient)
+}
+.home_description{
+    font-size: 1.5rem;
+}
+
+.home_contact{
+    background-color: var(--color-accent);
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: 1px solid transparent;/* hover시 1px때문에 밀리는 것을 방지하기 위해 */
+    border-radius: 4px;
+    display: inline-block; /* inline인 것은 유지하면서 block처럼 height: width: margin: 등 값을 주기 위해 */
+}
+
+.home_contact:hover{
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+}
+
+/* About */
+.majors{
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+.major{
+  background-color: var(--color-primary-varient);
+  padding: 2rem 1rem;
+  color: var(--color-text);
+  border-radius: 16px;
+  box-shadow: 4px 8px 6px rgba(0, 0, 0, .35);
+  margin:0 0.5rem;
+  cursor: default;
+}
+.major_icon{
+  font-size: 1.5rem;/* 폰트어썸 아이콘이니까 폰트사이즈로 크기 조절 */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.major:hover .major_icon{
+  transform:rotate(-15deg) scale(1.2);
+}
+
+/* skills */
+#skills{
+  background-color: var(--color-primary-varient);
+  color: var(--color-text);
+}
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 3rem ;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .35);
+}
+.skills_point{flex:60%;}/* flex: 1 1 60%와 같은 뜻이다. */
+.skill_tools_box{flex:40%;}
+.skill_title{
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+.bar{
+  /* 주축을 상하로 바꾸고 flex를 주자. */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.bar_data{
+  display: flex;
+  justify-content: space-between;
+}
+.bar_bg{
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary-varient200);
+}
+.bar_value{
+  height: 4px;
+  background-color: var(--color-accent);
+}
+.skill_tools{padding: 1rem;}
+.skill_etc{padding: 1rem;}
+
+/* work */
+#work{
+  background-color: var(--color-primary);
+  color: var(--color-text);
+
+}
+.categories{
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+}
+.categories>li{margin:0 .5rem;}
+
+.category{
+  font-size: 1.125rem;
+  padding: .5rem 3rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;/* anchor 태그가 아닌데 포인터 모양 커서로 바뀌게 한다. */
+  color: var(--color-text);
+  position: relative;/* 내부에 있는 .category_count의 위치를 맞추기 위해 얘를 기준으로 넣었다. */
+}
+.category_count{
+  display: block;/* 인라인아니니까  */
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-accent-varient);
+  color: var(--color-text);
+  display: flex;/* flex 처리하지 않으면 숫자3이 start쪽으로 갈것이다. */
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top: -20px;
+  right: 16px;
+  opacity: 0;
+  transition:all 250ms;
+}
+.category.selected{
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+.category:hover .category_count{
+  opacity: 1;
+  top:-10px;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+}
+.project{
+  position: relative;
+  border-radius: 8px;
+  flex-basis: calc(25% - 16px);
+    /* 이미지 원래 사이즈대로 들어가는 것을 줄여서 한 줄에 4개 들어가게 하려고25%,
+    margin -8px 한 것 때문에 한 칸 밀리는 것을 빼주기 위해 - 16px */
+  margin: 8px;
+  /* calc 하기 위해서는 절댓값-절댓값만 가능하므로 .5rem이 아니라 8px로 적음 */
+}
+.project_img{
+  width: 100%;
+}
+.project_data{
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%; height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-10px);
+  transition:all 250ms;
+}
+.project_data:hover{
+  opacity: 0.8;
+  transform: translate(0px);
+}
+
+.arrow_up{
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 3rem;right: 3rem;
+  font-size: 3rem;
+  width: 4.5rem;height: 4.5rem;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 var(--color-accent);
+  text-align: center;
+}
+
+/* footer */
+#contact{
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.contact_link{
+  padding: 1rem;
+  font-size: 2rem;}
+.contact_link:hover{color:var(--color-accent) ;}
+
+address{
+  font-style: normal;
+}
