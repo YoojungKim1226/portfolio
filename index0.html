@@ -1,0 +1,220 @@
+<!-- 1일차 내가 만든 사이트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김유정의 포트폴리오</title>
+    <script src="https://kit.fontawesome.com/4a70c66504.js" crossorigin="anonymous"></script> <!-- 사이트에서 가져온 코드 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header -->
+<header class="header">
+    <div class="header_logo">
+        <img src="images/top-logo.png" alt="logo" class="header_logo_img">
+        <h1><a href="#">유정's Portfolio</a></h1>
+    </div>
+    <nav class="header_nav">
+        <ul class="header_menu">
+            <li><a href="#" class="header_menu_item active">Home</a></li><!-- 선택색상 주려고 active 줘놨음 -->
+            <li><a href="#" class="header_menu_item">About me</a></li>
+            <li><a href="#" class="header_menu_item">Skills</a></li>
+            <li><a href="#" class="header_menu_item">My work</a></li>
+            <li><a href="#" class="header_menu_item">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="header_toggle" aria-label="navigation menu toggle"><i class="fa-solid fa-bars"></i></button>
+</header>
+<!-- Main -->
+<main class="main">
+  <!-- Home -->
+  <section id="home">
+    <div class="home_container">
+      <img src="images/profile.png" alt="김유정 프로필 사진" class="home_avatar">
+      <div class="home-description"><!-- 이미지 옆의 글자들을 묶은 div -->
+        <h2 class="home_title">안녕하세요, <strong>김유정</strong>입니다.</h2>
+        <p class="home_profile_text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quam recusandae magnam, earum fuga, quos odit eveniet explicabo saepe praesentium officia, totam commodi cum vitae cumque quasi consectetur! Iusto, illum?
+        </p>
+        <a href="#" class="home_contact">Contact Me</a>
+      </div>
+    </div>
+  </section>
+  <!-- About -->
+  <section id="about">
+    <h2 class="title">About me</h2>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea et architecto beatae, labore, veniam itaque doloremque tempore aperiam error voluptatum quaerat dignissimos quae facilis dolores natus perferendis dolore esse pariatur.
+    </p>
+    <ul class="major">
+      <i class="fa-regular fa-object-group"></i>
+      <p>UI 디자인</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur sint qui eveniet cumque, vero ipsum reprehenderit deserunt nisi? Id et quisquam obcaecati quae quasi sed minima aperiam impedit velit hic!</p>
+    </ul>
+    <ul class="major">
+      <i class="fa-solid fa-users-viewfinder"></i>
+      <p>UX 디자인</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, consequuntur delectus iure sapiente quos aspernatur aut consequatur aperiam at quo illum inventore iste quod corporis rem nobis harum ipsa laboriosam?</p>
+    <ul class="major">
+      <i class="fa-solid fa-file-code"></i>
+      <p>UX 디자인</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, consequuntur delectus iure sapiente quos aspernatur aut consequatur aperiam at quo illum inventore iste quod corporis rem nobis harum ipsa laboriosam?</p>
+
+    </ul>
+  </section>
+  <!-- Skills -->
+  <section id="skills">
+    <div>
+      <h2 class="title">My skills</h2>
+      <p class="description">Skills & Attributes</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, vero ex nam nostrum exercitationem architecto obcaecati et placeat ratione minima inventore minus cumque voluptas repellat itaque recusandae quaerat laboriosam delectus.</p>
+      <div class="skills">
+        <section class="skills_point">
+          <h3 class="skill_title">Skills</h3>
+          <ul>
+            <li class="bar">
+            <li class="bar">
+            <li class="bar">
+            <li class="bar">
+            <li class="bar">
+              <div class="bar_data">
+                <span>PHOTOSHOP</span><span>90%</span>
+              </div>
+              <div class="bar_bg" style="width: 90%;"><!-- 굳이 CSS로 주지 말고 그냥 인라인 스타일로 넣자. -->
+                <span>80%</span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="bar_data">
+                <span>PHOTOSHOP</span><span>90%</span>
+              </div>
+              <div class="bar_bg" style="width: 90%;"><!-- 굳이 CSS로 주지 말고 그냥 인라인 스타일로 넣자. -->
+                <span>80%</span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="bar_data">
+                <span>PHOTOSHOP</span><span>90%</span>
+              </div>
+              <div class="bar_bg" style="width: 90%;"><!-- 굳이 CSS로 주지 말고 그냥 인라인 스타일로 넣자. -->
+                <span>80%</span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="bar_data">
+                <span>PHOTOSHOP</span><span>90%</span>
+              </div>
+              <div class="bar_bg" style="width: 90%;"><!-- 굳이 CSS로 주지 말고 그냥 인라인 스타일로 넣자. -->
+                <span>80%</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section skill_tools>
+          <h3 class="skill_title">Tools</h3>
+          <ul> 
+            <li>포토샵을 이용한 이미지 제작</li>
+            <li>일러스트를 이용한 캐릭터 제작</li>
+            <li>피그마를 이용한 UXUI 제작</li>
+            <li>VSCODE를 이용한 HTML CSS 작성</li>
+          </ul>
+        </section>
+        <section class="skill_etc">
+          <h3 class="skill_title">ETC</h3>
+          <ul><li>Lorem ipsum dolor sit amet.</li></ul>
+          <ul><li>Lorem ipsum dolor sit amet.</li></ul>
+          <ul><li>Lorem ipsum dolor sit amet.</li></ul>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- Work -->
+  <section id="work">
+    <div>
+        <h2 class="title">My work</h2>
+        <p class="description">Projects</p>
+        <ul class="categories">
+            <li><button class="category selected">All</button><span>3</span></li>
+            <li><button class="category">프로젝트1</button></li>
+            <li><button class="category">프로젝트2</button></li>
+            <li><button class="category">프로젝트3</button></li>
+        </ul>
+        <ul class="projects">
+          <li class="project">
+            <a href="#" target="_blank"> 
+              <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+              <div class="project_data">
+                <h3>프로젝트명#1</h3>
+                <p>프로젝트 내용 간단한 설명</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="projects">
+          <li class="project">
+            <a href="#" target="_blank"> 
+              <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+              <div class="project_data">
+                <h3>프로젝트명#1</h3>
+                <p>프로젝트 내용 간단한 설명</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="projects">
+          <li class="project">
+            <a href="#" target="_blank"> 
+              <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+              <div class="project_data">
+                <h3>프로젝트명#2</h3>
+                <p>프로젝트 내용 간단한 설명</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="projects">
+          <li class="project">
+            <a href="#" target="_blank"> 
+              <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+              <div class="project_data">
+                <h3>프로젝트명#3</h3>
+                <p>프로젝트 내용 간단한 설명</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="projects">
+          <li class="project">
+            <a href="#" target="_blank"> 
+              <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+              <div class="project_data">
+                <h3>프로젝트명#4</h3>
+                <p>프로젝트 내용 간단한 설명</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+    </div>
+</section>
+
+  <aside>
+    <a href="#" class="arrow_up" title="위로 가기 back to top"> <!-- 앵커에는 대부분 타이틀을 단다. 내용이 tool tip처럼 뜬다. -->
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </aside>
+
+</main>
+<!-- footer -->
+<footer id="contact">
+  <div>
+    <h2 class="title">Let's talk</h2>
+    <p class="description">otrainbow@naver.com</p>
+    <a href="https://blog.naver.com/giekgamja" title="블로그">
+      <i class="fa-brands fa-blogger"></i>
+    </a>
+    <address>&copy;KimYoojung - All rights reserved</address>
+  </div>
+</footer>
+</body>
+</html>
